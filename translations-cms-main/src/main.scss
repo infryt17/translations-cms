@@ -14,10 +14,14 @@ $supportClr: #4d3370;
   border: 1.5px solid black;
 
   &:hover {
-    background-color: $hoverClr;
+    @include defHover();
   }
 }
-
+@mixin defHover {
+  background-color: $hoverClr;
+  transform: translateY(-4px);
+  transition: 0.2s ease;
+}
 .demo {
   @include defaultBtn();
 }
@@ -37,6 +41,7 @@ $supportClr: #4d3370;
   gap: 15px;
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
   & a {
     text-decoration: none;
     color: white;
@@ -47,9 +52,7 @@ $supportClr: #4d3370;
     align-items: center;
     padding-top: 15px;
     &:hover {
-      background-color: $hoverClr;
-      transform: translateY(-4px);
-      transition: 0.2s ease;
+      @include defHover();
     }
   }
 }
@@ -62,12 +65,10 @@ $supportClr: #4d3370;
   display: inline-block;
   height: 400px;
   width: 200px;
+  align-items: center;
+  justify-content: center;
   &:hover {
-    transform: translateY(-4px);
-    transition: 0.2s ease;
-    background: lighten($secondaryBg, 3%);
-    align-items: center;
-    justify-content: center;
+    @include defHover();
   }
 }
 .topbar {
@@ -82,9 +83,14 @@ $supportClr: #4d3370;
   background-color: $supportClr;
 }
 .searchBar {
+  position: sticky;
   background-color: $third;
   border: none;
   border-radius: 5px;
-  width: 50%;
+  width: 30%;
   height: 40px;
+  &:hover {
+    background-color: $hoverClr;
+    transition: 0.2s ease;
+  }
 }
