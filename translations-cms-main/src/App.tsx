@@ -1,11 +1,14 @@
 import './main.scss';
+import { BrowserRouter } from 'react-router-dom';
+
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <header className="topbar">
         <h1>CMS</h1>
       </header>
-      <input className="searchBar" type="text"></input>
+
+      <input className="searchBar" type="text" />
 
       <nav className="sidebar">
         <h2 className="NavTitle">Menu</h2>
@@ -26,7 +29,7 @@ function App() {
           <div className="card wide">Wide Card</div>
         </div>
       </main>
-    </>
+    </BrowserRouter>
   );
 }
 

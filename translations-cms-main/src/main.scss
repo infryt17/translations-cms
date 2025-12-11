@@ -52,7 +52,8 @@ $supportClr: #4d3370;
     align-items: center;
     padding-top: 15px;
     &:hover {
-      @include defHover();
+      transition: 0.2s ease;
+      background-color: $hoverClr;
     }
   }
 }
