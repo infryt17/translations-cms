@@ -25,4 +25,39 @@ $hoverClr: #7c4fb6;
   background-color: $primaryBg;
   text-align: center;
   color: white;
+  height: auto;
+}
+.sidebar {
+  width: 250px;
+  background: $secondaryBg;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 15px;
+
+  & a {
+    text-decoration: none;
+    color: white;
+    background-color: $third;
+    border-radius: 10px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    padding-top: 15px;
+    &:hover {
+      background-color: $hoverClr;
+    }
+  }
+}
+
+.card {
+  background: $secondaryBg;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  height: 400px;
+  width: 200px;
 }

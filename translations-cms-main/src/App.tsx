@@ -1,17 +1,29 @@
 import './main.scss';
 import Button from './components/button';
-import { Activity } from 'react';
 function App() {
   return (
     <>
-      <header>
-        <div className="SearchBar">Searchbar</div>
-        <Activity>
-          <div className="NavBar">navigaton</div>
-        </Activity>
-        <button className="navBarToggle">Toggle for nav</button>
-      </header>
+      <div className="topbar">
+        <h1>Site Title</h1>
+      </div>
       <Button />
+
+      <nav className="sidebar">
+        <h2 className="NavTitle">Side bar</h2>
+        <div className="userCard">
+          <p>user</p>
+        </div>
+        <a href="#">Site1</a>
+        <a href="#">Site2</a>
+        <a href="#">Site3</a>
+      </nav>
+
+      <section className="">
+        <div className="card"></div>
+        <div className="card"></div>
+        <div className="card"></div>
+        <div className="card"></div>
+      </section>
     </>
   );
 }
