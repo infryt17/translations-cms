@@ -2,6 +2,7 @@ $primaryBg: #332642;
 $secondaryBg: #433558;
 $third: #9062cc;
 $hoverClr: #7c4fb6;
+$supportClr: #4d3370;
 
 @mixin defaultBtn {
   background-color: $third;
@@ -35,7 +36,7 @@ $hoverClr: #7c4fb6;
   flex-direction: column;
   gap: 15px;
   border-radius: 15px;
-
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   & a {
     text-decoration: none;
     color: white;
@@ -47,10 +48,11 @@ $hoverClr: #7c4fb6;
     padding-top: 15px;
     &:hover {
       background-color: $hoverClr;
+      transform: translateY(-4px);
+      transition: 0.2s ease;
     }
   }
 }
-
 .card {
   background: $secondaryBg;
   padding: 20px;
@@ -60,4 +62,29 @@ $hoverClr: #7c4fb6;
   display: inline-block;
   height: 400px;
   width: 200px;
+  &:hover {
+    transform: translateY(-4px);
+    transition: 0.2s ease;
+    background: lighten($secondaryBg, 3%);
+    align-items: center;
+    justify-content: center;
+  }
+}
+.topbar {
+  background-color: $supportClr;
+}
+
+.userCard {
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  background-color: $supportClr;
+}
+.searchBar {
+  background-color: $third;
+  border: none;
+  border-radius: 5px;
+  width: 50%;
+  height: 40px;
 }

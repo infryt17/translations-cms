@@ -1,29 +1,31 @@
 import './main.scss';
-import Button from './components/button';
 function App() {
   return (
     <>
-      <div className="topbar">
-        <h1>Site Title</h1>
-      </div>
-      <Button />
+      <header className="topbar">
+        <h1>CMS</h1>
+      </header>
+      <input className="searchBar" type="text"></input>
 
       <nav className="sidebar">
-        <h2 className="NavTitle">Side bar</h2>
+        <h2 className="NavTitle">Menu</h2>
         <div className="userCard">
-          <p>user</p>
+          <p>User</p>
         </div>
-        <a href="#">Site1</a>
-        <a href="#">Site2</a>
-        <a href="#">Site3</a>
+
+        <a href="#">Overview</a>
+        <a href="#">Analytics</a>
+        <a href="#">Languages</a>
       </nav>
 
-      <section className="">
-        <div className="card"></div>
-        <div className="card"></div>
-        <div className="card"></div>
-        <div className="card"></div>
-      </section>
+      <main className="contentArea">
+        <div className="grid">
+          <div className="card large">Main Card</div>
+          <div className="card">Small Card</div>
+          <div className="card">Small Card</div>
+          <div className="card wide">Wide Card</div>
+        </div>
+      </main>
     </>
   );
 }
