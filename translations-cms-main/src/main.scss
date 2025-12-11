@@ -1,0 +1,28 @@
+$primaryBg: #332642;
+$secondaryBg: #433558;
+$third: #9062cc;
+$hoverClr: #7c4fb6;
+
+@mixin defaultBtn {
+  background-color: $third;
+  color: white;
+  width: 70px;
+  height: 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 1.5px solid black;
+
+  &:hover {
+    background-color: $hoverClr;
+  }
+}
+
+.demo {
+  @include defaultBtn();
+}
+#root {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: $primaryBg;
+  text-align: center;
+  color: white;
+}
