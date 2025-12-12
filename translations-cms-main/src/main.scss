@@ -3,6 +3,7 @@ $secondaryBg: #433558;
 $third: #9062cc;
 $hoverClr: #7c4fb6;
 $supportClr: #4d3370;
+$active: #c6ace7;
 
 #root {
   font-family: Arial, Helvetica, sans-serif;
@@ -37,6 +38,9 @@ $supportClr: #4d3370;
     background-color: $hoverClr;
     transition: 0.2s ease;
   }
+  &::placeholder {
+    color: white;
+  }
 }
 
 .layout {
@@ -66,6 +70,10 @@ $supportClr: #4d3370;
     font-weight: bold;
     transition: 0.2s ease;
 
+    &.active {
+      background-color: $active;
+    }
+
     &:hover {
       background: $hoverClr;
       transform: translateY(-3px);
@@ -88,7 +96,7 @@ main {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
+  gap: 16px;
 }
 
 .card,
@@ -107,15 +115,22 @@ main {
 
   &.cardMain {
     grid-column: span 2;
-    height: 260px;
+    height: 280px;
   }
 
   &.card {
-    height: 180px;
+    height: 250px;
   }
 
   &.cardWide {
     grid-column: span 3;
     height: 150px;
   }
+}
+.outputCard {
+  background: $supportClr;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  text-align: center;
 }
