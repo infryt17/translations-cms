@@ -4,94 +4,118 @@ $third: #9062cc;
 $hoverClr: #7c4fb6;
 $supportClr: #4d3370;
 
-@mixin defaultBtn {
-  background-color: $third;
-  color: white;
-  width: 70px;
-  height: 25px;
-  border-radius: 20px;
-  cursor: pointer;
-  border: 1.5px solid black;
-
-  &:hover {
-    @include defHover();
-  }
-}
-@mixin defHover {
-  background-color: $hoverClr;
-  transform: translateY(-4px);
-  transition: 0.2s ease;
-}
-.demo {
-  @include defaultBtn();
-}
 #root {
   font-family: Arial, Helvetica, sans-serif;
   background-color: $primaryBg;
-  text-align: center;
   color: white;
-  height: auto;
-}
-.sidebar {
-  width: 250px;
-  background: $secondaryBg;
-  padding: 20px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  overflow: hidden;
-  & a {
-    text-decoration: none;
-    color: white;
-    background-color: $third;
-    border-radius: 10px;
-    height: 30px;
-    text-align: center;
-    align-items: center;
-    padding-top: 15px;
-    &:hover {
-      transition: 0.2s ease;
-      background-color: $hoverClr;
-    }
-  }
-}
-.card {
-  background: $secondaryBg;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  display: inline-block;
-  height: 400px;
-  width: 200px;
-  align-items: center;
-  justify-content: center;
-  &:hover {
-    @include defHover();
-  }
-}
-.topbar {
-  background-color: $supportClr;
 }
 
-.userCard {
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-  font-weight: bold;
+.topbar {
   background-color: $supportClr;
+  padding: 20px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
+
 .searchBar {
-  position: sticky;
   background-color: $third;
   border: none;
-  border-radius: 5px;
-  width: 30%;
-  height: 40px;
+  border-radius: 8px;
+  width: 350px;
+  height: 36px;
+  padding: 8px 12px;
+  margin-right: 30px;
+  font-size: 0.9rem;
+  color: white;
   &:hover {
     background-color: $hoverClr;
     transition: 0.2s ease;
+  }
+}
+
+.layout {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+}
+.sidebar {
+  width: 240px;
+  background: $secondaryBg;
+  padding: 20px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: fit-content;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+
+  & a {
+    text-decoration: none;
+    color: white;
+    padding: 12px 14px;
+    background: $third;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.2s ease;
+
+    &:hover {
+      background: $hoverClr;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.userCard {
+  background: $supportClr;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.card,
+.cardMain,
+.cardWide {
+  background: $secondaryBg;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  transition: 0.2s ease;
+
+  &:hover {
+    background-color: $hoverClr;
+    transform: translateY(-4px);
+  }
+
+  &.cardMain {
+    grid-column: span 2;
+    height: 260px;
+  }
+
+  &.card {
+    height: 180px;
+  }
+
+  &.cardWide {
+    grid-column: span 3;
+    height: 150px;
   }
 }

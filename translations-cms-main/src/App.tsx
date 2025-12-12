@@ -5,30 +5,30 @@ function App() {
   return (
     <BrowserRouter>
       <header className="topbar">
-        <h1>CMS</h1>
+        <h1>CMS translation</h1>
+        <input className="searchBar" placeholder="Search..." type="text" />
       </header>
 
-      <input className="searchBar" type="text" />
+      <div className="layout">
+        <nav className="sidebar">
+          <h2>Menu</h2>
 
-      <nav className="sidebar">
-        <h2 className="NavTitle">Menu</h2>
-        <div className="userCard">
-          <p>User</p>
-        </div>
+          <div className="userCard">User</div>
 
-        <a href="#">Overview</a>
-        <a href="#">Analytics</a>
-        <a href="#">Languages</a>
-      </nav>
+          <a href="#">Overview</a>
+          <a href="#">Analytics</a>
+          <a href="#">Languages</a>
+        </nav>
 
-      <main className="contentArea">
-        <div className="grid">
-          <div className="card large">Main Card</div>
-          <div className="card">Small Card</div>
-          <div className="card">Small Card</div>
-          <div className="card wide">Wide Card</div>
-        </div>
-      </main>
+        <main>
+          <div className="grid">
+            <div className="cardMain">Main Card</div>
+            <div className="card">Small Card</div>
+            <div className="card">Small Card</div>
+            <div className="cardWide">Wide Card</div>
+          </div>
+        </main>
+      </div>
     </BrowserRouter>
   );
 }
