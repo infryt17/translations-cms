@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 export default function Navbar() {
   return (
     <div className="sidebar">
@@ -7,11 +8,16 @@ export default function Navbar() {
 
       <nav>
         <ul>
-          <li>Overview</li>
-          <li>Analitycs</li>
-          <li>Languages</li>
+          <Link to="/">
+            <li>Overview</li>
+          </Link>
+          <Link to="/Analytics">
+            <li>Analitycs</li>
+          </Link>
+          <Link to="/Languages">
+            <li>Languages</li>
+          </Link>
         </ul>
-        <button>Settings</button>
       </nav>
     </div>
   );

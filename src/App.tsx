@@ -13,11 +13,13 @@ function App() {
         <input className="searchBar" placeholder="Search..." type="text" />
       </header>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<OverView />} />
-        <Route path="/Analytics" element={<Analytics />} />
-        <Route path="/Languages" element={<Languages />} />
-      </Routes>
+      <div>
+        <Routes>
+          <Route path="/" element={<OverView />} />
+          <Route path="/Analytics" element={<Analytics />} />
+          <Route path="/Languages" element={<Languages />} />
+        </Routes>
+      </div>
     </>
   );
 }
