@@ -8,13 +8,13 @@ export default function Navbar() {
 
       <nav>
         <ul>
-          <Link to="/">
+          <Link to="/" style={{ textDecoration: 'none' }}>
             <li>Overview</li>
           </Link>
-          <Link to="/Analytics">
+          <Link to="/Analytics" style={{ textDecoration: 'none' }}>
             <li>Analitycs</li>
           </Link>
-          <Link to="/Languages">
+          <Link to="/Languages" style={{ textDecoration: 'none' }}>
             <li>Languages</li>
           </Link>
         </ul>

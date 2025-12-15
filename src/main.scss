@@ -14,7 +14,7 @@ $active: #c6ace7;
   flex-direction: column;
 }
 
-@mixin topbar {
+.topbar {
   background-color: $supportClr;
   padding: 20px 25px;
   display: flex;
@@ -24,7 +24,7 @@ $active: #c6ace7;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-@mixin searchBar {
+.searchBar {
   background-color: $third;
   border: none;
   border-radius: 8px;
@@ -112,6 +112,7 @@ main {
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
   transition: 0.2s ease;
+  height: 250px;
 
   &:hover {
     background-color: $hoverClr;
@@ -121,10 +122,6 @@ main {
   &.cardMain {
     grid-column: span 2;
     height: 280px;
-  }
-
-  &.card {
-    height: 250px;
   }
 
   &.cardWide {
@@ -138,4 +135,21 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
     text-align: center;
   }
+}
+.languagesCont {
+  display: grid;
+  background-color: $secondaryBg;
+  height: fit-content;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  border-radius: 20px;
+}
+.activeLng {
+  height: 200px;
+  display: flex;
+  background-color: $third;
+}
+.inWorkLng {
+  display: flex;
+  height: 200px;
+  background-color: $supportClr;
 }

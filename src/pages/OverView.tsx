@@ -1,3 +1,5 @@
+import '../main.scss';
+
 export default function OverView() {
   return (
     <div className="layout">
