@@ -1,23 +1,35 @@
+import '../main.scss';
+
 export default function Languages() {
   return (
-    <>
-      <h1 className="topbar">Languages page</h1>
-      <div className="languagesCont">
-        <div className="activeLng">
-          <h3>Active Languages</h3>
-        </div>
+    <div>
+      <h1 className="topbar">Languages</h1>
 
-        <div className="inWorkLng">
-          <h3>Languages in work</h3>
-        </div>
-      </div>
-      <h3>Languages settings</h3>
       <div>
-        <p>block or unblock laungage</p>
+        <section className="activeLng">
+          <h3>Active Languages</h3>
+          <ul>
+            <li>English</li>
+            <li>Spanish</li>
+          </ul>
+        </section>
+
+        <section className="inWorkLng">
+          <h3>Languages in Work</h3>
+          <ul>
+            <li>German</li>
+            <li>French</li>
+          </ul>
+        </section>
       </div>
-      <div>
-        <p>translating errors</p>
-      </div>
-    </>
+
+      <section>
+        <h3>Language Settings</h3>
+        <ul>
+          <li>Block / unblock language</li>
+          <li>Translation errors</li>
+        </ul>
+      </section>
+    </div>
   );
 }

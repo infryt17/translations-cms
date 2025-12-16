@@ -5,8 +5,8 @@ export default function Analytics() {
       <h1 className="topbar">Analytics</h1>
 
       <div className="layout">
-        <section className="grid">
-          <div className="card cardMain">
+        <section>
+          <div>
             <h3>Last changes log</h3>
             <ul>
               <li>Updated users </li>
@@ -15,15 +15,15 @@ export default function Analytics() {
             </ul>
           </div>
 
-          <div className="card outputCard">
+          <div>
             <h3>Users:</h3>
             <p>2000</p>
             <span>+""% from last month</span>
           </div>
 
-          <div className="card cardWide">
+          <div>
             <h3>Most used languages: </h3>
-            <div className="langCont">
+            <div>
               <div className="activeLng"></div>
             </div>
           </div>
