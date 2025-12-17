@@ -27,4 +27,12 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
     </LanguageContext.Provider>
   );
 }
-export function
+export function useLanguages(): LanguageContextValue {
+  const context = useContext(LanguageContext);
+
+  if (!context) {
+    throw new Error('data must be used in a LanguageProvider');
+  }
+
+  return context;
+}

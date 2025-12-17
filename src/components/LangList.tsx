@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useLanguages } from '../context/langContext';
+import '../context/langContext';
 
 export default function LangList() {
-  const [languages, setLanguages] = useState(['English', 'Spanish']);
+  const { activeLanguages, setActiveLanguages } = useLanguages();
   const [newLang, setNewLang] = useState('');
 
   function addLang() {
