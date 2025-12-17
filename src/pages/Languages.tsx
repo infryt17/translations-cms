@@ -1,4 +1,5 @@
 import '../main.scss';
+import LangList from '../components/LangList';
 
 export default function Languages() {
   return (
@@ -25,10 +26,7 @@ export default function Languages() {
 
       <section>
         <h3>Language Settings</h3>
-        <ul>
-          <li>Block / unblock language</li>
-          <li>Translation errors</li>
-        </ul>
+        <LangList />
       </section>
     </div>
   );

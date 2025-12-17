@@ -1,15 +1,47 @@
-import { useEffect } from 'react';
 import { useState } from 'react';
 
 export default function LangList() {
-  const [languages, setLanguages] = useState(['English, Spanish']);
+  const [languages, setLanguages] = useState(['English', 'Spanish']);
   const [newLang, setNewLang] = useState('');
 
-  function addLang() {}
+  function addLang() {
+    if (!newLang.trim()) return;
+    setLanguages((prev) => [...prev, newLang.trim()]);
+    setNewLang('');
+  }
 
-  function stopLang() {}
+  function stopLang(langToRemove: string) {
+    setLanguages((prev) => prev.filter((lang) => lang !== langToRemove));
+  }
 
-  function resetTranslating() {}
+  function resetTranslating() {
+    setLanguages(['English', 'Spanish']);
+    setNewLang('');
+  }
 
-  return <></>;
+  return (
+    <div>
+      <h2>Languages</h2>
+
+      <ul>
+        {languages.map((lang) => (
+          <li key={lang}>
+            {lang} <button onClick={() => stopLang(lang)}>stop</button>
+          </li>
+        ))}
+      </ul>
+
+      <input
+        type="text"
+        value={newLang}
+        onChange={(e) => setNewLang(e.target.value)}
+        placeholder="Add language"
+      />
+      <button onClick={addLang}>Add</button>
+
+      <div>
+        <button onClick={resetTranslating}>Reset</button>
+      </div>
+    </div>
+  );
 }
