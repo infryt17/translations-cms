@@ -10,4 +10,6 @@ export default function LangList() {
   function stopLang() {}
 
   function resetTranslating() {}
+
+  return <></>;
 }

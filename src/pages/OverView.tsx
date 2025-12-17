@@ -11,10 +11,6 @@ export default function OverView() {
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
             placeat dolorem iste qui, similique consectetur optio sequi amet
             expedita, har um eum esse cum voluptas sint soluta nobis recusandae
-            obcaecati? Quia. expedita, har um eum esse cum voluptas sint soluta
-            nobis recusandae obcaecati? Quia. placeat dolorem iste qui,
-            similique consectetur optio sequi amet expedita, har um eum esse cum
-            voluptas sint soluta nobis
           </p>
         </div>
         <div className="card">
@@ -23,10 +19,6 @@ export default function OverView() {
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed
             placeat dolorem iste qui, similique consectetur optio sequi amet
             expedita, har um eum esse cum voluptas sint soluta nobis recusandae
-            obcaecati? Quia. expedita, har um eum esse cum voluptas sint soluta
-            nobis recusandae obcaecati? Quia. placeat dolorem iste qui,
-            similique consectetur optio sequi amet expedita, har um eum esse cum
-            voluptas sint soluta nobis
           </p>
         </div>
         <div className="cardWide">Wide Card</div>

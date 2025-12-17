@@ -4,15 +4,26 @@ import Languages from './pages/Languages';
 import Navbar from './components/NavBar';
 import OverView from './pages/OverView';
 import './main.scss';
+import { useState, Activity } from 'react';
 
 function App() {
+  const [isShowingBtn, setIsShowingBtn] = useState(true);
   return (
     <>
       <header className="topbar">
+        <button
+          className="NavBarBtn"
+          onClick={() => setIsShowingBtn(!isShowingBtn)}
+        >
+          Navigation
+        </button>
         <h1>CMS translation</h1>
+
         <input className="searchBar" placeholder="Search..." type="text" />
       </header>
-      <Navbar />
+      <Activity mode={isShowingBtn ? 'visible' : 'hidden'}>
+        <Navbar />
+      </Activity>
       <div>
         <Routes>
           <Route path="/" element={<OverView />} />

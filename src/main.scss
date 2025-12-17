@@ -118,24 +118,29 @@ main {
     background-color: $hoverClr;
     transform: translateY(-4px);
   }
-
-  &.cardMain {
-    grid-column: span 2;
-    height: 280px;
-  }
-
-  &.cardWide {
-    grid-column: span 3;
-    height: 150px;
-  }
-  &.outputCard {
-    background: $supportClr;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
-    text-align: center;
-  }
 }
+.card {
+  @include card();
+}
+.cardMain {
+  grid-column: span 2;
+  height: 280px;
+  @include card();
+}
+
+.cardWide {
+  grid-column: span 3;
+  height: 150px;
+  @include card();
+}
+.outputCard {
+  background: $supportClr;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
 .languagesCont {
   display: grid;
   background-color: $secondaryBg;
@@ -152,4 +157,19 @@ main {
   display: flex;
   height: 200px;
   background-color: $supportClr;
+}
+.NavBarBtn {
+  background-color: $third;
+  border-radius: 15px;
+  width: fit-content;
+  color: white;
+  height: 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+
+  &:hover {
+    background-color: $hoverClr;
+    transition: 0.2s ease;
+  }
 }
