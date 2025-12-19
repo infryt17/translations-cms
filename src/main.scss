@@ -122,6 +122,7 @@ main {
 }
 .card {
   @include card();
+  height: fit-content;
 }
 .cardMain {
   grid-column: span 2;
