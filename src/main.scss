@@ -1,0 +1,238 @@
+$primaryBg: #332642;
+$secondaryBg: #433558;
+$third: #9062cc;
+$hoverClr: #7c4fb6;
+$supportClr: #4d3370;
+$active: #c6ace7;
+
+#root {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: $primaryBg;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  background-color: $supportClr;
+  padding: 20px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.searchBar {
+  background-color: $third;
+  border: none;
+  border-radius: 8px;
+  width: 350px;
+  height: 36px;
+  padding: 8px 12px;
+  margin-right: 30px;
+  font-size: 0.9rem;
+  color: white;
+  &:hover {
+    background-color: $hoverClr;
+    transition: 0.2s ease;
+  }
+  &::placeholder {
+    color: white;
+  }
+}
+
+.layout {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+}
+.sidebar {
+  width: 240px;
+  background: $secondaryBg;
+  padding: 20px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: fit-content;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+
+  & li {
+    text-decoration: none;
+    color: white;
+    padding: 12px 12px;
+    background: $third;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.2s ease;
+    list-style-type: none;
+    align-items: center;
+
+    &:link {
+      text-decoration: none;
+      color: white;
+    }
+
+    &.active {
+      background-color: $active;
+    }
+
+    &:hover {
+      background: $hoverClr;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.userCard {
+  background: $supportClr;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  width: 50px;
+}
+
+main {
+  flex: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+@mixin card {
+  background: $secondaryBg;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  transition: 0.2s ease;
+  height: 250px;
+
+  &:hover {
+    background-color: $hoverClr;
+    transform: translateY(-4px);
+  }
+}
+.card {
+  @include card();
+}
+.cardMain {
+  grid-column: span 2;
+  height: 280px;
+  @include card();
+}
+
+.cardWide {
+  grid-column: span 3;
+  height: 150px;
+  @include card();
+}
+.outputCard {
+  background: $supportClr;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+.languagesCont {
+  display: grid;
+  background-color: $secondaryBg;
+  height: fit-content;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  border-radius: 20px;
+}
+.activeLng {
+  height: 200px;
+  display: flex;
+  background-color: $third;
+}
+.inWorkLng {
+  display: flex;
+  height: 200px;
+  background-color: $supportClr;
+}
+.NavBarBtn {
+  background-color: $third;
+  border-radius: 15px;
+  width: fit-content;
+  color: white;
+  height: 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+
+  &:hover {
+    background-color: $hoverClr;
+    transition: 0.2s ease;
+  }
+}
+.Llayout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.langGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.langSection {
+  background: $secondaryBg;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
+
+  h3 {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+
+.langList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+
+  li {
+    list-style: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    background: $third;
+    transition: 0.2s ease;
+
+    &:hover {
+      background: $hoverClr;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.langActive {
+  border: 2px solid $active;
+  border-radius: 20px;
+}
+
+.langWork {
+  opacity: 0.9;
+  background-color: $secondaryBg;
+  border-radius: 20px;
+}
+
+.settings {
+  background: $supportClr;
+  padding: 20px;
+  border-radius: 18px;
+}
