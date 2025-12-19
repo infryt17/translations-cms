@@ -74,6 +74,7 @@ $active: #c6ace7;
 
     &:link {
       text-decoration: none;
+      color: white;
     }
 
     &.active {
@@ -172,4 +173,66 @@ main {
     background-color: $hoverClr;
     transition: 0.2s ease;
   }
+}
+.Llayout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.langGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.langSection {
+  background: $secondaryBg;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
+
+  h3 {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+
+.langList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+
+  li {
+    list-style: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+    background: $third;
+    transition: 0.2s ease;
+
+    &:hover {
+      background: $hoverClr;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.langActive {
+  border: 2px solid $active;
+  border-radius: 20px;
+}
+
+.langWork {
+  opacity: 0.9;
+  background-color: $secondaryBg;
+  border-radius: 20px;
+}
+
+.settings {
+  background: $supportClr;
+  padding: 20px;
+  border-radius: 18px;
 }
