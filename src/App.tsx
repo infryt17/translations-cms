@@ -6,8 +6,10 @@ import OverView from './pages/OverView';
 import './main.scss';
 import { useState, Activity } from 'react';
 import { LanguageProvider } from './context/langContext';
+import SearchBar from './components/searchBar';
 
 function App() {
+  const [searchQuery, setSearchQuery] = useState('');
   const [isShowingBtn, setIsShowingBtn] = useState(true);
   return (
     <>
@@ -21,7 +23,7 @@ function App() {
           </button>
           <h1>CMS translation</h1>
 
-          <input className="searchBar" placeholder="Search..." type="text" />
+          <SearchBar value={searchQuery} onChange={setSearchQuery} />
         </header>
         <Activity mode={isShowingBtn ? 'visible' : 'hidden'}>
           <Navbar />
