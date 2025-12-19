@@ -8,6 +8,8 @@ import React, {
 interface LanguageContextValue {
   activeLanguages: string[];
   setActiveLanguages: React.Dispatch<React.SetStateAction<string[]>>;
+  searchQuery: string;
+  setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const LanguageContext = createContext<LanguageContextValue | undefined>(
@@ -17,12 +19,20 @@ interface LanguageProviderProps {
   children: ReactNode;
 }
 export function LanguageProvider({ children }: LanguageProviderProps) {
+  const [searchQuery, setSearchQuery] = useState<string>('');
   const [activeLanguages, setActiveLanguages] = useState<string[]>([
     'English',
     'Spanish',
   ]);
   return (
-    <LanguageContext.Provider value={{ activeLanguages, setActiveLanguages }}>
+    <LanguageContext.Provider
+      value={{
+        activeLanguages,
+        setActiveLanguages,
+        searchQuery,
+        setSearchQuery,
+      }}
+    >
       {children}
     </LanguageContext.Provider>
   );

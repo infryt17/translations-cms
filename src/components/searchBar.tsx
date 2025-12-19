@@ -1,26 +1,25 @@
 import type { ChangeEvent } from 'react';
+import { useLanguages } from '../context/langContext';
 
 interface SearchBarProps {
-  value: string;
-  onChange: (value: string) => void;
   placeholder?: string;
   className?: string;
 }
 
 const SearchBar = ({
-  value,
-  onChange,
   placeholder = 'Search...',
   className = 'searchBar',
 }: SearchBarProps) => {
+  const { searchQuery, setSearchQuery } = useLanguages();
+
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    onChange(e.target.value);
+    setSearchQuery(e.target.value);
   };
 
   return (
     <input
       type="text"
-      value={value}
+      value={searchQuery}
       onChange={handleChange}
       placeholder={placeholder}
       className={className}
