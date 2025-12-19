@@ -1,4 +1,4 @@
-import '../main.scss';
+import '../analytics.scss';
 export default function Analytics() {
   return (
     <>
