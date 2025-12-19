@@ -6,15 +6,6 @@ $supportClr: #4d3370;
 $active: #c6ace7;
 $gradient: linear-gradient(135deg, #7c4fb6, #c6ace7);
 
-#root {
-  font-family: 'Arial', Helvetica, sans-serif;
-  background-color: $primaryBg;
-  color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
 .topbar {
   background: $supportClr;
   padding: 20px 25px;
